@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        super.prepareForSegue(segue, sender: sender)
+        
+        if segue.identifier == Segues.team1Segue.rawValue, let vc = segue.destinationViewController as? TeamPickerVC {
+            vc.team = .team1
+        }
+    }
 }
 

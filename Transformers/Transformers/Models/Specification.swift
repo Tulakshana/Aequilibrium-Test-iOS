@@ -18,4 +18,8 @@ class Specification {
     var courage: Int = 0
     var firepower: Int = 0
     var skill: Int = 0
+    
+    func overallRating() -> Int {
+        return strength + intelligence + speed + endurance + firepower
+    }
 }

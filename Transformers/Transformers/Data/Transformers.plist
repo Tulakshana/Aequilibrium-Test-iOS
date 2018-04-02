@@ -6,6 +6,64 @@
 		<key>specification</key>
 		<dict>
 			<key>strength</key>
+			<integer>9</integer>
+			<key>intelligence</key>
+			<integer>3</integer>
+			<key>speed</key>
+			<integer>4</integer>
+			<key>endurance</key>
+			<integer>9</integer>
+			<key>rank</key>
+			<integer>5</integer>
+			<key>courage</key>
+			<integer>10</integer>
+			<key>firepower</key>
+			<integer>1</integer>
+			<key>skill</key>
+			<integer>4</integer>
+		</dict>
+		<key>name</key>
+		<string>Brawn</string>
+		<key>allegiance</key>
+		<string>Autobot</string>
+		<key>thumb</key>
+		<string>Brawn</string>
+		<key>function</key>
+		<string>Demolitions</string>
+	</dict>
+	<dict>
+		<key>specification</key>
+		<dict>
+			<key>strength</key>
+			<integer>8</integer>
+			<key>intelligence</key>
+			<integer>9</integer>
+			<key>speed</key>
+			<integer>4</integer>
+			<key>endurance</key>
+			<integer>9</integer>
+			<key>rank</key>
+			<integer>8</integer>
+			<key>courage</key>
+			<integer>10</integer>
+			<key>firepower</key>
+			<integer>7</integer>
+			<key>skill</key>
+			<integer>7</integer>
+		</dict>
+		<key>name</key>
+		<string>Razorclaw</string>
+		<key>allegiance</key>
+		<string>Decepticon</string>
+		<key>thumb</key>
+		<string>Razorclaw</string>
+		<key>function</key>
+		<string>Predacon Leader</string>
+	</dict>
+	<dict>
+		<key>specification</key>
+		<dict>
+			<key>strength</key>
 			<integer>3</integer>
 			<key>intelligence</key>
 			<integer>9</integer>

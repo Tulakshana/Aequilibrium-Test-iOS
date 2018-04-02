@@ -19,6 +19,8 @@
 		F538B31E20723B0E003BA333 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B31D20723B0E003BA333 /* Specification.swift */; };
 		F538B32020723EAC003BA333 /* BattleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B31F20723EAC003BA333 /* BattleManager.swift */; };
 		F538B323207240B6003BA333 /* TeamPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B322207240B6003BA333 /* TeamPickerVC.swift */; };
+		F538B32520725B46003BA333 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B32420725B46003BA333 /* Constants.swift */; };
+		F538B327207261BA003BA333 /* ResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B326207261BA003BA333 /* ResultsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F538B31D20723B0E003BA333 /* Specification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specification.swift; path = Models/Specification.swift; sourceTree = "<group>"; };
 		F538B31F20723EAC003BA333 /* BattleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleManager.swift; sourceTree = "<group>"; };
 		F538B322207240B6003BA333 /* TeamPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamPickerVC.swift; path = VC/TeamPickerVC.swift; sourceTree = "<group>"; };
+		F538B32420725B46003BA333 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F538B326207261BA003BA333 /* ResultsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultsVC.swift; path = VC/ResultsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				F52AD5C320720C6000A4DA42 /* LaunchScreen.storyboard */,
 				F52AD5C620720C6000A4DA42 /* Info.plist */,
 				F538B31F20723EAC003BA333 /* BattleManager.swift */,
+				F538B32420725B46003BA333 /* Constants.swift */,
 			);
 			path = Transformers;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				F538B322207240B6003BA333 /* TeamPickerVC.swift */,
+				F538B326207261BA003BA333 /* ResultsVC.swift */,
 			);
 			name = VC;
 			sourceTree = "<group>";
@@ -391,6 +397,8 @@
 				F538B31C20723AEB003BA333 /* Transformer.swift in Sources */,
 				F538B32020723EAC003BA333 /* BattleManager.swift in Sources */,
 				F52AD5BB20720C6000A4DA42 /* AppDelegate.swift in Sources */,
+				F538B32520725B46003BA333 /* Constants.swift in Sources */,
+				F538B327207261BA003BA333 /* ResultsVC.swift in Sources */,
 				F538B31E20723B0E003BA333 /* Specification.swift in Sources */,
 				F538B323207240B6003BA333 /* TeamPickerVC.swift in Sources */,
 			);
