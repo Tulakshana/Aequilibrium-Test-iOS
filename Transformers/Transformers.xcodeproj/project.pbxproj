@@ -1,0 +1,643 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F52AD5BB20720C6000A4DA42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52AD5BA20720C6000A4DA42 /* AppDelegate.swift */; };
+		F52AD5BD20720C6000A4DA42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52AD5BC20720C6000A4DA42 /* ViewController.swift */; };
+		F52AD5C020720C6000A4DA42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52AD5BE20720C6000A4DA42 /* Main.storyboard */; };
+		F52AD5C220720C6000A4DA42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F52AD5C120720C6000A4DA42 /* Assets.xcassets */; };
+		F52AD5C520720C6000A4DA42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52AD5C320720C6000A4DA42 /* LaunchScreen.storyboard */; };
+		F52AD5D020720C6000A4DA42 /* TransformersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52AD5CF20720C6000A4DA42 /* TransformersTests.swift */; };
+		F52AD5DB20720C6000A4DA42 /* TransformersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52AD5DA20720C6000A4DA42 /* TransformersUITests.swift */; };
+		F52AD5EC20722EDD00A4DA42 /* Transformers.plist in Resources */ = {isa = PBXBuildFile; fileRef = F52AD5EB20722EDD00A4DA42 /* Transformers.plist */; };
+		F538B31C20723AEB003BA333 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B31B20723AEB003BA333 /* Transformer.swift */; };
+		F538B31E20723B0E003BA333 /* Specification.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B31D20723B0E003BA333 /* Specification.swift */; };
+		F538B32020723EAC003BA333 /* BattleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B31F20723EAC003BA333 /* BattleManager.swift */; };
+		F538B323207240B6003BA333 /* TeamPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F538B322207240B6003BA333 /* TeamPickerVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F52AD5CC20720C6000A4DA42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F52AD5AF20720C5F00A4DA42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F52AD5B620720C5F00A4DA42;
+			remoteInfo = Transformers;
+		};
+		F52AD5D720720C6000A4DA42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F52AD5AF20720C5F00A4DA42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F52AD5B620720C5F00A4DA42;
+			remoteInfo = Transformers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F52AD5B720720C5F00A4DA42 /* Transformers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transformers.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52AD5BA20720C6000A4DA42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F52AD5BC20720C6000A4DA42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F52AD5BF20720C6000A4DA42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F52AD5C120720C6000A4DA42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F52AD5C420720C6000A4DA42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F52AD5C620720C6000A4DA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F52AD5CB20720C6000A4DA42 /* TransformersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52AD5CF20720C6000A4DA42 /* TransformersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersTests.swift; sourceTree = "<group>"; };
+		F52AD5D120720C6000A4DA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F52AD5D620720C6000A4DA42 /* TransformersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52AD5DA20720C6000A4DA42 /* TransformersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformersUITests.swift; sourceTree = "<group>"; };
+		F52AD5DC20720C6000A4DA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F52AD5EB20722EDD00A4DA42 /* Transformers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Transformers.plist; path = Data/Transformers.plist; sourceTree = "<group>"; };
+		F538B31B20723AEB003BA333 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transformer.swift; path = Models/Transformer.swift; sourceTree = "<group>"; };
+		F538B31D20723B0E003BA333 /* Specification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Specification.swift; path = Models/Specification.swift; sourceTree = "<group>"; };
+		F538B31F20723EAC003BA333 /* BattleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleManager.swift; sourceTree = "<group>"; };
+		F538B322207240B6003BA333 /* TeamPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TeamPickerVC.swift; path = VC/TeamPickerVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F52AD5B420720C5F00A4DA42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52AD5C820720C6000A4DA42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52AD5D320720C6000A4DA42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DED7002AE655B2CBE423254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F52AD5AE20720C5F00A4DA42 = {
+			isa = PBXGroup;
+			children = (
+				F52AD5B920720C6000A4DA42 /* Transformers */,
+				F52AD5CE20720C6000A4DA42 /* TransformersTests */,
+				F52AD5D920720C6000A4DA42 /* TransformersUITests */,
+				F52AD5B820720C5F00A4DA42 /* Products */,
+				3DED7002AE655B2CBE423254 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F52AD5B820720C5F00A4DA42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F52AD5B720720C5F00A4DA42 /* Transformers.app */,
+				F52AD5CB20720C6000A4DA42 /* TransformersTests.xctest */,
+				F52AD5D620720C6000A4DA42 /* TransformersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F52AD5B920720C6000A4DA42 /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				F538B32120724078003BA333 /* VC */,
+				F538B31A20723ABA003BA333 /* Models */,
+				F52AD5EA20722EB800A4DA42 /* Data */,
+				F52AD5BA20720C6000A4DA42 /* AppDelegate.swift */,
+				F52AD5BC20720C6000A4DA42 /* ViewController.swift */,
+				F52AD5BE20720C6000A4DA42 /* Main.storyboard */,
+				F52AD5C120720C6000A4DA42 /* Assets.xcassets */,
+				F52AD5C320720C6000A4DA42 /* LaunchScreen.storyboard */,
+				F52AD5C620720C6000A4DA42 /* Info.plist */,
+				F538B31F20723EAC003BA333 /* BattleManager.swift */,
+			);
+			path = Transformers;
+			sourceTree = "<group>";
+		};
+		F52AD5CE20720C6000A4DA42 /* TransformersTests */ = {
+			isa = PBXGroup;
+			children = (
+				F52AD5CF20720C6000A4DA42 /* TransformersTests.swift */,
+				F52AD5D120720C6000A4DA42 /* Info.plist */,
+			);
+			path = TransformersTests;
+			sourceTree = "<group>";
+		};
+		F52AD5D920720C6000A4DA42 /* TransformersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F52AD5DA20720C6000A4DA42 /* TransformersUITests.swift */,
+				F52AD5DC20720C6000A4DA42 /* Info.plist */,
+			);
+			path = TransformersUITests;
+			sourceTree = "<group>";
+		};
+		F52AD5EA20722EB800A4DA42 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F52AD5EB20722EDD00A4DA42 /* Transformers.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		F538B31A20723ABA003BA333 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F538B31B20723AEB003BA333 /* Transformer.swift */,
+				F538B31D20723B0E003BA333 /* Specification.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F538B32120724078003BA333 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				F538B322207240B6003BA333 /* TeamPickerVC.swift */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F52AD5B620720C5F00A4DA42 /* Transformers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52AD5DF20720C6000A4DA42 /* Build configuration list for PBXNativeTarget "Transformers" */;
+			buildPhases = (
+				F52AD5B320720C5F00A4DA42 /* Sources */,
+				F52AD5B420720C5F00A4DA42 /* Frameworks */,
+				F52AD5B520720C5F00A4DA42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Transformers;
+			productName = Transformers;
+			productReference = F52AD5B720720C5F00A4DA42 /* Transformers.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F52AD5CA20720C6000A4DA42 /* TransformersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52AD5E220720C6000A4DA42 /* Build configuration list for PBXNativeTarget "TransformersTests" */;
+			buildPhases = (
+				57C19517640DA973144D52DB /* [CP] Check Pods Manifest.lock */,
+				F52AD5C720720C6000A4DA42 /* Sources */,
+				F52AD5C820720C6000A4DA42 /* Frameworks */,
+				F52AD5C920720C6000A4DA42 /* Resources */,
+				6FD8E2099D8FE43BEBE3DDB6 /* [CP] Embed Pods Frameworks */,
+				7E26D12A1014077D4D72F224 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F52AD5CD20720C6000A4DA42 /* PBXTargetDependency */,
+			);
+			name = TransformersTests;
+			productName = TransformersTests;
+			productReference = F52AD5CB20720C6000A4DA42 /* TransformersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F52AD5D520720C6000A4DA42 /* TransformersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52AD5E520720C6000A4DA42 /* Build configuration list for PBXNativeTarget "TransformersUITests" */;
+			buildPhases = (
+				1BB9E9819461D506BA910668 /* [CP] Check Pods Manifest.lock */,
+				F52AD5D220720C6000A4DA42 /* Sources */,
+				F52AD5D320720C6000A4DA42 /* Frameworks */,
+				F52AD5D420720C6000A4DA42 /* Resources */,
+				227DCA498D888C73C9F4744D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F52AD5D820720C6000A4DA42 /* PBXTargetDependency */,
+			);
+			name = TransformersUITests;
+			productName = TransformersUITests;
+			productReference = F52AD5D620720C6000A4DA42 /* TransformersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F52AD5AF20720C5F00A4DA42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Tulakshana;
+				TargetAttributes = {
+					F52AD5B620720C5F00A4DA42 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					F52AD5CA20720C6000A4DA42 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F52AD5B620720C5F00A4DA42;
+					};
+					F52AD5D520720C6000A4DA42 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = F52AD5B620720C5F00A4DA42;
+					};
+				};
+			};
+			buildConfigurationList = F52AD5B220720C5F00A4DA42 /* Build configuration list for PBXProject "Transformers" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F52AD5AE20720C5F00A4DA42;
+			productRefGroup = F52AD5B820720C5F00A4DA42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F52AD5B620720C5F00A4DA42 /* Transformers */,
+				F52AD5CA20720C6000A4DA42 /* TransformersTests */,
+				F52AD5D520720C6000A4DA42 /* TransformersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F52AD5B520720C5F00A4DA42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52AD5C520720C6000A4DA42 /* LaunchScreen.storyboard in Resources */,
+				F52AD5EC20722EDD00A4DA42 /* Transformers.plist in Resources */,
+				F52AD5C220720C6000A4DA42 /* Assets.xcassets in Resources */,
+				F52AD5C020720C6000A4DA42 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52AD5C920720C6000A4DA42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52AD5D420720C6000A4DA42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1BB9E9819461D506BA910668 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		227DCA498D888C73C9F4744D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransformersUITests/Pods-TransformersUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57C19517640DA973144D52DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6FD8E2099D8FE43BEBE3DDB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransformersTests/Pods-TransformersTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E26D12A1014077D4D72F224 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TransformersTests/Pods-TransformersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F52AD5B320720C5F00A4DA42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52AD5BD20720C6000A4DA42 /* ViewController.swift in Sources */,
+				F538B31C20723AEB003BA333 /* Transformer.swift in Sources */,
+				F538B32020723EAC003BA333 /* BattleManager.swift in Sources */,
+				F52AD5BB20720C6000A4DA42 /* AppDelegate.swift in Sources */,
+				F538B31E20723B0E003BA333 /* Specification.swift in Sources */,
+				F538B323207240B6003BA333 /* TeamPickerVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52AD5C720720C6000A4DA42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52AD5D020720C6000A4DA42 /* TransformersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F52AD5D220720C6000A4DA42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52AD5DB20720C6000A4DA42 /* TransformersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F52AD5CD20720C6000A4DA42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F52AD5B620720C5F00A4DA42 /* Transformers */;
+			targetProxy = F52AD5CC20720C6000A4DA42 /* PBXContainerItemProxy */;
+		};
+		F52AD5D820720C6000A4DA42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F52AD5B620720C5F00A4DA42 /* Transformers */;
+			targetProxy = F52AD5D720720C6000A4DA42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F52AD5BE20720C6000A4DA42 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F52AD5BF20720C6000A4DA42 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F52AD5C320720C6000A4DA42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F52AD5C420720C6000A4DA42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F52AD5DD20720C6000A4DA42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F52AD5DE20720C6000A4DA42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F52AD5E020720C6000A4DA42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Transformers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulakshana.Transformers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F52AD5E120720C6000A4DA42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Transformers/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulakshana.Transformers;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F52AD5E320720C6000A4DA42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TransformersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulakshana.TransformersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transformers.app/Transformers";
+			};
+			name = Debug;
+		};
+		F52AD5E420720C6000A4DA42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TransformersTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulakshana.TransformersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transformers.app/Transformers";
+			};
+			name = Release;
+		};
+		F52AD5E620720C6000A4DA42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TransformersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulakshana.TransformersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Transformers;
+			};
+			name = Debug;
+		};
+		F52AD5E720720C6000A4DA42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TransformersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tulakshana.TransformersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Transformers;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F52AD5B220720C5F00A4DA42 /* Build configuration list for PBXProject "Transformers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52AD5DD20720C6000A4DA42 /* Debug */,
+				F52AD5DE20720C6000A4DA42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F52AD5DF20720C6000A4DA42 /* Build configuration list for PBXNativeTarget "Transformers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52AD5E020720C6000A4DA42 /* Debug */,
+				F52AD5E120720C6000A4DA42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F52AD5E220720C6000A4DA42 /* Build configuration list for PBXNativeTarget "TransformersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52AD5E320720C6000A4DA42 /* Debug */,
+				F52AD5E420720C6000A4DA42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F52AD5E520720C6000A4DA42 /* Build configuration list for PBXNativeTarget "TransformersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52AD5E620720C6000A4DA42 /* Debug */,
+				F52AD5E720720C6000A4DA42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F52AD5AF20720C5F00A4DA42 /* Project object */;
+}
