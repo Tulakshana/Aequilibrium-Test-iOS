@@ -58,6 +58,10 @@ class ViewController: UIViewController {
     @IBAction func btnSample2Tapped(sender: UIButton) {
         txtIntegers.text = calculator.sampleIntegerArray2()
     }
+    
+    @IBAction func btnSample3Tapped(sender: UIButton) {
+        txtIntegers.text = calculator.sampleIntegerArray3()
+    }
 }
 
 extension ViewController: UITextFieldDelegate {
