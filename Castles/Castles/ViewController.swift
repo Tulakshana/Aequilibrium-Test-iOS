@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     // MARK: -
     
-    @IBAction func btnCalculateTapped(sender: UIButton) {
+    @IBAction func btnCalculateTapped(_ sender: UIButton) {
         
         if let heightsString = txtIntegers.text {
             
@@ -42,31 +42,31 @@ class ViewController: UIViewController {
                 message += " can be built."
             }
             
-            let alert: UIAlertController = UIAlertController.init(title: "Castles", message: message, preferredStyle: .Alert)
-            alert.addAction(UIAlertAction.init(title: "Ok", style: .Default, handler: { (_) in
-                alert.dismissViewControllerAnimated(true, completion: nil)
+            let alert: UIAlertController = UIAlertController.init(title: "Castles", message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction.init(title: "Ok", style: .default, handler: { (_) in
+                alert.dismiss(animated: true, completion: nil)
             }))
-            self.presentViewController(alert, animated: true, completion: nil)
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
     
-    @IBAction func btnSample1Tapped(sender: UIButton) {
+    @IBAction func btnSample1Tapped(_ sender: UIButton) {
         txtIntegers.text = calculator.sampleIntegerArray1()
     }
     
-    @IBAction func btnSample2Tapped(sender: UIButton) {
+    @IBAction func btnSample2Tapped(_ sender: UIButton) {
         txtIntegers.text = calculator.sampleIntegerArray2()
     }
     
-    @IBAction func btnSample3Tapped(sender: UIButton) {
+    @IBAction func btnSample3Tapped(_ sender: UIButton) {
         txtIntegers.text = calculator.sampleIntegerArray3()
     }
 }
 
 extension ViewController: UITextFieldDelegate {
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
     }

@@ -20,7 +20,7 @@ class ResultsVC: UIViewController {
     
     // MARK: -
     
-    @IBAction func btnOkTapped(sender: UIButton) {
-        self.navigationController?.popToRootViewControllerAnimated(true)
+    @IBAction func btnOkTapped(_ sender: UIButton) {
+        _ = self.navigationController?.popToRootViewController(animated: true)
     }
 }

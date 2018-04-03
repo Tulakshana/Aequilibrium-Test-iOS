@@ -33,8 +33,8 @@ class BattleManager {
     
     static let shared = BattleManager()
     
-    var team1: [NSIndexPath]?
-    var team2: [NSIndexPath]?
+    var team1: [IndexPath]?
+    var team2: [IndexPath]?
     
     var team1Transformers: [Transformer] = []
     var team2Transformers: [Transformer] = []
@@ -46,25 +46,25 @@ class BattleManager {
     
     static func fetchTransformers() -> [Transformer] {
         var transformerArray: [Transformer] = []
-        if let path = NSBundle.mainBundle().pathForResource("Transformers", ofType: "plist") {
+        if let path = Bundle.main.path(forResource: "Transformers", ofType: "plist") {
             if let plist = NSArray(contentsOfFile: path) {
                 for item in plist {
                     let transformer = Transformer()
-                    transformer.name = item.objectForKey(Keys.name.rawValue) as! String
-                    transformer.allegiance = item.objectForKey(Keys.allegiance.rawValue) as! String
-                    transformer.thumb = item.objectForKey(Keys.thumb.rawValue) as! String
-                    transformer.function = item.objectForKey(Keys.function.rawValue) as! String
+                    transformer.name = (item as AnyObject).object(forKey: Keys.name.rawValue) as! String
+                    transformer.allegiance = (item as AnyObject).object(forKey: Keys.allegiance.rawValue) as! String
+                    transformer.thumb = (item as AnyObject).object(forKey: Keys.thumb.rawValue) as! String
+                    transformer.function = (item as AnyObject).object(forKey: Keys.function.rawValue) as! String
                     
                     let spec = Specification()
-                    let specDic = item.objectForKey(Keys.specification.rawValue) as! NSDictionary
-                    spec.strength = specDic.objectForKey(Keys.strength.rawValue) as! Int
-                    spec.intelligence = specDic.objectForKey(Keys.intelligence.rawValue) as! Int
-                    spec.speed = specDic.objectForKey(Keys.speed.rawValue) as! Int
-                    spec.endurance = specDic.objectForKey(Keys.endurance.rawValue) as! Int
-                    spec.rank = specDic.objectForKey(Keys.rank.rawValue) as! Int
-                    spec.courage = specDic.objectForKey(Keys.courage.rawValue) as! Int
-                    spec.firepower = specDic.objectForKey(Keys.firepower.rawValue) as! Int
-                    spec.skill = specDic.objectForKey(Keys.skill.rawValue) as! Int
+                    let specDic = (item as AnyObject).object(forKey: Keys.specification.rawValue) as! NSDictionary
+                    spec.strength = specDic.object(forKey: Keys.strength.rawValue) as! Int
+                    spec.intelligence = specDic.object(forKey: Keys.intelligence.rawValue) as! Int
+                    spec.speed = specDic.object(forKey: Keys.speed.rawValue) as! Int
+                    spec.endurance = specDic.object(forKey: Keys.endurance.rawValue) as! Int
+                    spec.rank = specDic.object(forKey: Keys.rank.rawValue) as! Int
+                    spec.courage = specDic.object(forKey: Keys.courage.rawValue) as! Int
+                    spec.firepower = specDic.object(forKey: Keys.firepower.rawValue) as! Int
+                    spec.skill = specDic.object(forKey: Keys.skill.rawValue) as! Int
                     
                     transformer.spec = spec
                     
@@ -72,12 +72,14 @@ class BattleManager {
                 }
             }
         }
-        return transformerArray
+        return transformerArray.sorted(by: { (t1, t2) -> Bool in
+            t1.name < t2.name
+        })
     }
     
     func calculateScore() -> String {
         
-        if team2?.count > team1?.count {
+        if (team2?.count)! > (team1?.count)! {
             battles = team1?.count ?? 0
         } else {
             battles = team2?.count ?? 0
@@ -107,8 +109,6 @@ class BattleManager {
                 continue
             } else if self.evaluateOverallRating(t1, team2Member: t2) {
                 continue
-            } else {
-                // Its a tie. Both transformers will be distroyed
             }
         }
         
@@ -158,7 +158,7 @@ class BattleManager {
                 members.append(BattleManager.transformers[path.row])
             }
         }
-        return members.sort({ (t1, t2) -> Bool in
+        return members.sorted(by: { (t1, t2) -> Bool in
             t1.spec.rank > t2.spec.rank
         })
     }
@@ -170,12 +170,12 @@ class BattleManager {
                 members.append(BattleManager.transformers[path.row])
             }
         }
-        return members.sort({ (t1, t2) -> Bool in
+        return members.sorted(by: { (t1, t2) -> Bool in
             t1.spec.rank > t2.spec.rank
         })
     }
     
-    func evaluateCourageAndStrength(team1Member: Transformer, team2Member: Transformer) -> Bool {
+    func evaluateCourageAndStrength(_ team1Member: Transformer, team2Member: Transformer) -> Bool {
         if (team1Member.spec.courage <= (team2Member.spec.courage - 4)) && (team1Member.spec.strength <= (team2Member.spec.strength - 3)) {
             survivingTeam2Members.append(team2Member)
         } else if (team2Member.spec.courage <= (team1Member.spec.courage - 4)) && (team2Member.spec.strength <= (team1Member.spec.strength - 3)) {
@@ -186,7 +186,7 @@ class BattleManager {
         return true
     }
     
-    func evaluateSkill(team1Member: Transformer, team2Member: Transformer) -> Bool {
+    func evaluateSkill(_ team1Member: Transformer, team2Member: Transformer) -> Bool {
         if team1Member.spec.skill <= (team2Member.spec.skill - 3) {
             survivingTeam2Members.append(team2Member)
         } else if team2Member.spec.skill <= (team1Member.spec.skill - 3) {
@@ -197,7 +197,7 @@ class BattleManager {
         return true
     }
     
-    func evaluateOverallRating(team1Member: Transformer, team2Member: Transformer) -> Bool {
+    func evaluateOverallRating(_ team1Member: Transformer, team2Member: Transformer) -> Bool {
         if team1Member.spec.overallRating() < team2Member.spec.overallRating() {
             survivingTeam2Members.append(team2Member)
         } else if team2Member.spec.overallRating() < team1Member.spec.overallRating() {
@@ -208,7 +208,7 @@ class BattleManager {
         return true
     }
     
-    func evaluateSpecialRule(team1Member: Transformer, team2Member: Transformer) -> Bool {
+    func evaluateSpecialRule(_ team1Member: Transformer, team2Member: Transformer) -> Bool {
         if (team1Member.name == TransformerNames.optimusPrime.rawValue) || (team1Member.name == TransformerNames.predaking.rawValue) {
             survivingTeam1Members.append(team1Member)
         } else if (team2Member.name == TransformerNames.optimusPrime.rawValue) || (team2Member.name == TransformerNames.predaking.rawValue) {
@@ -219,7 +219,7 @@ class BattleManager {
         return true
     }
     
-    func evaluateDuplicate(team1Member: Transformer, team2Member: Transformer) -> Bool {
+    func evaluateDuplicate(_ team1Member: Transformer, team2Member: Transformer) -> Bool {
         if team1Member.name == team2Member.name {
             return true
         } else {
@@ -227,7 +227,7 @@ class BattleManager {
         }
     }
     
-    func evaluateGameChanger(team1Member: Transformer, team2Member: Transformer) -> Bool {
+    func evaluateGameChanger(_ team1Member: Transformer, team2Member: Transformer) -> Bool {
         if ((team1Member.name == TransformerNames.optimusPrime.rawValue) || (team1Member.name == TransformerNames.predaking.rawValue)) && ((team2Member.name == TransformerNames.optimusPrime.rawValue) || (team2Member.name == TransformerNames.predaking.rawValue)){
             return true
         } else {
@@ -247,7 +247,7 @@ class BattleManager {
         }
     }
     
-    func survivingMembers(team: Team) -> [Transformer] {
+    func survivingMembers(_ team: Team) -> [Transformer] {
         if team == .team1 {
             return survivingTeam1Members
         } else if team == .team2 {

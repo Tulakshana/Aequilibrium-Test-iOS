@@ -31,9 +31,9 @@ class CastleCalculator {
         return "2,6,6,6,3"
     }
     
-    func calculateCastles(heights: String) -> Int {
+    func calculateCastles(_ heights: String) -> Int {
         var castleCount: Int = 0
-        let heightsArray = heights.componentsSeparatedByString(",")
+        let heightsArray = heights.components(separatedBy: ",")
         if heightsArray.count > 1 {
             var movingDirection: Direction = .none
             var lastReadHeight: Int = 0

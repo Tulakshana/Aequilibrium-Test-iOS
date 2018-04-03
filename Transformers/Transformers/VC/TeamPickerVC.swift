@@ -29,13 +29,13 @@ class TeamPickerVC: UIViewController {
         loadTransformers()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.selectTransformers()
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         if team == .team2 {
@@ -43,10 +43,10 @@ class TeamPickerVC: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        super.prepareForSegue(segue, sender: sender)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
         
-        if segue.identifier == Segues.team2Segue.rawValue, let vc = segue.destinationViewController as? TeamPickerVC {
+        if segue.identifier == Segues.team2Segue.rawValue, let vc = segue.destination as? TeamPickerVC {
             vc.team = .team2
             BattleManager.shared.team1 = table.indexPathsForSelectedRows
         }
@@ -63,7 +63,7 @@ class TeamPickerVC: UIViewController {
         if (team == .team2) && (table.indexPathsForSelectedRows == nil) {
             if let selectedIndexPaths = BattleManager.shared.team2 {
                 for path in selectedIndexPaths {
-                    table.selectRowAtIndexPath(path, animated: true, scrollPosition: .Top)
+                    table.selectRow(at: path as IndexPath, animated: true, scrollPosition: .top)
                 }
                 self.updateSelection()
             }
@@ -72,10 +72,10 @@ class TeamPickerVC: UIViewController {
     
     func updateSelection() {
         if let count = table.indexPathsForSelectedRows?.count {
-            btnNext.enabled = (count > 0)
+            btnNext.isEnabled = (count > 0)
             lblCount.text = "(" + String(count) + ") selected"
         } else {
-            btnNext.enabled = false
+            btnNext.isEnabled = false
             lblCount.text = "(0) selected"
         }
     }
@@ -83,12 +83,12 @@ class TeamPickerVC: UIViewController {
 
 extension TeamPickerVC: UITableViewDelegate, UITableViewDataSource {
 
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transformers.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("transformerCell")!
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "transformerCell")!
         
         let transformer = transformers[indexPath.row]
         cell.textLabel?.text = transformer.name
@@ -98,11 +98,11 @@ extension TeamPickerVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.updateSelection()
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         self.updateSelection()
     }
 }
